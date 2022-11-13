@@ -84,7 +84,6 @@ function setSelectedZoomItem(selectedItem) {
     //     $(selectedItem.inputId).val(selectedItem['CODCOLIGADA'])
     //     $('#' + inputName + '___'+ row).val(selectedItem['CODCOLIGADA'])
     // }
-
 }
 
 /* VERIFICA SE PRECISA DA APROVAÇÃO DO GESTOR OU NÃO  */
