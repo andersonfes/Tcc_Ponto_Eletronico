@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><samp class="fluigicon fluigicon-user icon-md"></samp>Setor</h3>
+				</div>
+
+				<div class="panel-body">
+					<div class="row">
+						<input hidden name="name" id="name">
+					</div>
+
+					<div class="row">
+						<table tablename="table_documentos" class="table table-striped form-group col-md-12"
+							noaddbutton="false" id="tabelaSetores">
+							<thead>
+								<tr>
+									<td aline="center" class="form-group col-md-4"><b>Setor</b></td>
+									<td aline="center" class="form-group col-md-4"><b>Unidade</b></td>
+									<td aline="center" class="form-group col-md-4"><b>Responsável </b></td>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>
+										<input type="zoom" class="form-control col-sm-6" name="setor" id="setor" data-zoom="{		
+											'displayKey':'setor',
+											'datasetId':'dsTratativaArray',
+											'maximumSelectionLength':'1',
+											'placeholder':'',
+											'fields':[							
+												{
+													'field':'setor',
+													'label':'Setor',
+													'standard':'true'
+												}
+											]
+										}" />
+									
+									</td>
+									<!-- <td ><input type="text" class="form-control" name="unidade" id="unidade"></td> -->
+									<td><input type="zoom" id="unidade" name="unidade" data-zoom="{
+											'displayKey':'groupDescription',
+											'datasetId':'group',
+											'fields':[
+												{
+													'field':'groupDescription',
+													'label':'NomeGrupos',
+													'standard':'true'
+												}
+											]
+										}" /></td>
+									<!-- <td ><input type="text" class="form-control" name="responsavel" id="responsavel"></td> -->
+									<td><input type="zoom" id="responsavel" name="responsavel" data-zoom="{
+											'displayKey':'colleagueId',
+											'datasetId':'colleague',
+											'fields':[
+												{
+													'field':'colleagueName',
+													'label':'Nome',
+													'standard':'true'
+												}
+											]
+										}" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+<script src="setoresScript.js"></script>
+
+</html>
